@@ -147,11 +147,11 @@ function normalizeReverseText(text) {
  // Function to add prepared bets with confirmation (A3 button)
 function addPreparedBetsWithConfirmation() {
     const inputText = betInput.value.trim();
-    betInput.focus();
-    if (!inputText) {
+   if (!inputText) {
         alert('လောင်းကြေးထည့်ပါ');
         
         return;
+       betInput.focus();
     }
 
     const lines = inputText.split('\n');
