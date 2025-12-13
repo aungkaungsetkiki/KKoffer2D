@@ -151,7 +151,7 @@ function addPreparedBetsWithConfirmation() {
         alert('လောင်းကြေးထည့်ပါ');
         
         return;
-       betInput.focus();
+      
     }
 
     const lines = inputText.split('\n');
@@ -178,6 +178,7 @@ function addPreparedBetsWithConfirmation() {
 
     // Show custom dialog with Copy button
     showBetConfirmationDialog(preparedBets, invalidLines, invalidText);
+   
 }
 
 // Custom confirmation dialog with Copy button
