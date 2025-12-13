@@ -3,6 +3,7 @@
     let totalAmount = 0;
     let closedNumbers = new Set();
     let preparedBets = [];
+ 
 
     // DOM elements
     const betInput = document.getElementById('betInput');
@@ -25,6 +26,7 @@
     betInput.addEventListener('keydown', function(e) {
         if (e.ctrlKey && e.key === 'Enter') {
             prepareBets();
+
         }
     });
 
@@ -147,11 +149,10 @@ function normalizeReverseText(text) {
  // Function to add prepared bets with confirmation (A3 button)
 function addPreparedBetsWithConfirmation() {
     const inputText = betInput.value.trim();
-   if (!inputText) {
+    if (!inputText) {
         alert('လောင်းကြေးထည့်ပါ');
-        
+   betInput.focus();
         return;
-      
     }
 
     const lines = inputText.split('\n');
@@ -178,7 +179,6 @@ function addPreparedBetsWithConfirmation() {
 
     // Show custom dialog with Copy button
     showBetConfirmationDialog(preparedBets, invalidLines, invalidText);
-   
 }
 
 // Custom confirmation dialog with Copy button
@@ -274,7 +274,7 @@ function showBetConfirmationDialog(preparedBets, invalidLines, invalidText) {
     `;
     cancelButton.onclick = function() {
         document.body.removeChild(overlay);
-        betInput.focus();
+  betInput.focus();
     };
 
     if (invalidLines.length > 0) {
@@ -346,7 +346,7 @@ function showBetConfirmationDialog(preparedBets, invalidLines, invalidText) {
     okButton.onclick = function() {
         document.body.removeChild(overlay);
         addPreparedBets();
-        betInput.focus();
+  betInput.focus();
     };
 
     // Button order: Cancel - Copy - OK
@@ -1011,14 +1011,12 @@ function showBetConfirmationDialog(preparedBets, invalidLines, invalidText) {
     function clearInput() {
         betInput.value = '';
         betInput.focus();
-        betInput.focus();
     }
 
     // Function to clear all bets
     function clearAllBets() {
         if (bets.length === 0) {
             alert('မရှိပါ');
-            betInput.focus();
             return;
         }
         
@@ -1033,7 +1031,7 @@ function showBetConfirmationDialog(preparedBets, invalidLines, invalidText) {
 async function saveBets() {
     if (bets.length === 0) {
         alert('မရှိပါ');
-        betInput.focus();
+   betInput.focus();
         return;
     }
     
@@ -1139,7 +1137,7 @@ async function saveBets() {
 // After successful save to Supabase
 if (window.updateSlipCountAfterSave) {
     window.updateSlipCountAfterSave();
-    betInput.focus();
+  betInput.focus();
 }
 }
 // Add this function for better error messages
