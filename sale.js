@@ -132,6 +132,7 @@
             if (slipNumberElement) {
                 slipNumberElement.textContent = slipCount;
                 console.log(`Updated slip count to: ${slipCount}`);
+                  betInput.focus();
             }
             
             // Also update list count if element exists
