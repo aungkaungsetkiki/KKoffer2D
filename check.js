@@ -10,7 +10,7 @@
     
     try {
         const response = await fetch(
-            `https://stzepyuibjtoohofafue.supabase.co/rest/v1/Login?name=eq.${encodeURIComponent(savedName)}&pw=eq.${encodeURIComponent(savedPassword)}`,
+            `https://uegrqmyswaxffiejxnoi.supabase.co/rest/v1/Login?name=eq.${encodeURIComponent(savedName)}&pw=eq.${encodeURIComponent(savedPassword)}`,
             {
                 headers: {
                     'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVlZ3JxbXlzd2F4ZmZpZWp4bm9pIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU2MjU2NjYsImV4cCI6MjA4MTIwMTY2Nn0.OaYtJvafd4b70KbnveJtTHX_8mpsUbfwZkaCZoQrEx4',
