@@ -135,7 +135,7 @@ function processAndAddBets() {
         }
         
         // Case 4: Group numbers with amount (12/34/56-1000)
-        const groupMatch = normalizedLine.match(/^([\d\/\.\-\s]+?)[\-\s\.]+(\d+)$/);
+        const groupMatch = normalizedLine.match(/^([\d\/\.\-\s]+?)[\/\။\*\,\=\-\s\.]+(\d+)$/);
         if (groupMatch && !normalizedLine.includes('r')) {
             const [, numbersPart, amountStr] = groupMatch;
             const amount = parseInt(amountStr);
