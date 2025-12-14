@@ -3,7 +3,6 @@
     let totalAmount = 0;
     let closedNumbers = new Set();
     let preparedBets = [];
- 
 
     // DOM elements
     const betInput = document.getElementById('betInput');
@@ -26,7 +25,6 @@
     betInput.addEventListener('keydown', function(e) {
         if (e.ctrlKey && e.key === 'Enter') {
             prepareBets();
-
         }
     });
 
@@ -151,7 +149,6 @@ function addPreparedBetsWithConfirmation() {
     const inputText = betInput.value.trim();
     if (!inputText) {
         alert('လောင်းကြေးထည့်ပါ');
-   
         return;
     }
 
@@ -274,7 +271,7 @@ function showBetConfirmationDialog(preparedBets, invalidLines, invalidText) {
     `;
     cancelButton.onclick = function() {
         document.body.removeChild(overlay);
-  betInput.focus();
+         betInput.focus();
     };
 
     if (invalidLines.length > 0) {
@@ -346,7 +343,7 @@ function showBetConfirmationDialog(preparedBets, invalidLines, invalidText) {
     okButton.onclick = function() {
         document.body.removeChild(overlay);
         addPreparedBets();
-  betInput.focus();
+         betInput.focus();
     };
 
     // Button order: Cancel - Copy - OK
@@ -625,7 +622,7 @@ function showBetConfirmationDialog(preparedBets, invalidLines, invalidText) {
     function parseReverseComplexBet(line) {
         const bets = [];
         
-        const complexReverseMatch = line.match(/^(\d{1,2})[\-\s\.]*(\d+)\s*r\s*(\d+)$/);
+        const complexReverseMatch = line.match(/^(\d{1,2})[\=\*\-\s\.]*(\d+)\s*r\s*(\d+)$/);
         if (complexReverseMatch) {
             const [, numStr, amount1Str, amount2Str] = complexReverseMatch;
             const num = parseInt(numStr);
@@ -1136,7 +1133,6 @@ async function saveBets() {
 // After successful save to Supabase
 if (window.updateSlipCountAfterSave) {
     window.updateSlipCountAfterSave();
-  
 }
 }
 // Add this function for better error messages
