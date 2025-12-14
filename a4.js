@@ -299,6 +299,7 @@ function processAndAddBets() {
                 const listView = document.querySelector('.list-view');
                 listView.scrollTop = listView.scrollHeight;
             }, 100);
+            betInput.focus();
         } else {
             // Cancel နှိပ်ရင် original text ကို ပြန်ထည့်
             betInput.value = originalText;
