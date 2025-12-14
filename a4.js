@@ -269,6 +269,7 @@ function processAndAddBets() {
         }
         
         confirmMsg += `\n\nလောင်းကြေးစာရင်းထဲထည့်မလား?`;
+        betInput.focus();
  
         
         if (confirm(confirmMsg)) {
@@ -284,7 +285,7 @@ function processAndAddBets() {
             bets.push(...processedBets);
             processedBets.forEach(bet => {
                 totalAmount += bet.amount;
-                betInput.focus();
+        
             });
             
             updateDisplay();
