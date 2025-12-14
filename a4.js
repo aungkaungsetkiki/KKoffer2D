@@ -303,6 +303,7 @@ function processAndAddBets() {
         } else {
             // Cancel နှိပ်ရင် original text ကို ပြန်ထည့်
             betInput.value = originalText;
+            betInput.focus();
 
         }
     } else if (remainingLines.length > 0) {
@@ -312,10 +313,11 @@ function processAndAddBets() {
         
         // Keep the original special systems in the input field
         betInput.value = remainingLines.join('\n');
+        betInput.focus();
 
     } else {
         alert('လောင်းကြေးအသစ် မရှိပါ။');
- 
+ betInput.focus();
     }
 
             
