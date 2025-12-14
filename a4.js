@@ -43,7 +43,7 @@ function processAndAddBets() {
     const inputText = betInput.value.trim();
     if (!inputText) {
         alert('လောင်းကြေးထည့်ပါ');
- betInput.focus();
+
         return;
     }
 
@@ -269,7 +269,7 @@ function processAndAddBets() {
         }
         
         confirmMsg += `\n\nလောင်းကြေးစာရင်းထဲထည့်မလား?`;
- betInput.focus();
+ 
         
         if (confirm(confirmMsg)) {
             // Convert to bet objects and add to main list
@@ -287,6 +287,7 @@ function processAndAddBets() {
             });
             
             updateDisplay();
+            betInput.focus();
             
             // Update input field with remaining lines
             betInput.value = remainingLines.join('\n');
@@ -299,7 +300,7 @@ function processAndAddBets() {
         } else {
             // Cancel နှိပ်ရင် original text ကို ပြန်ထည့်
             betInput.value = originalText;
- betInput.focus();
+
         }
     } else if (remainingLines.length > 0) {
         // Only special systems found
@@ -308,9 +309,11 @@ function processAndAddBets() {
         
         // Keep the original special systems in the input field
         betInput.value = remainingLines.join('\n');
- betInput.focus();
+
     } else {
         alert('လောင်းကြေးအသစ် မရှိပါ။');
- betInput.focus();
+ 
     }
                 }
+betInput.focus();
+
