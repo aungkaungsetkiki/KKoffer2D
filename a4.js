@@ -269,7 +269,7 @@ function processAndAddBets() {
         }
         
         confirmMsg += `\n\nလောင်းကြေးစာရင်းထဲထည့်မလား?`;
-        betInput.focus();
+        
  
         
         if (confirm(confirmMsg)) {
@@ -316,6 +316,9 @@ function processAndAddBets() {
         alert('လောင်းကြေးအသစ် မရှိပါ။');
  
     }
-                }
+    betInput.focus();
+            
+
+}
 
 
