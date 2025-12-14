@@ -316,7 +316,7 @@ function processAndAddBets() {
         alert('လောင်းကြေးအသစ် မရှိပါ။');
  
     }
-    betInput.focus();
+
             
 
 }
