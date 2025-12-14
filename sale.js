@@ -1,6 +1,4 @@
-
-    
-    // Initialize Supabase client
+  // Initialize Supabase client
     let supabase;
     let users = [];
     let currentKey = '';
@@ -132,7 +130,7 @@
             if (slipNumberElement) {
                 slipNumberElement.textContent = slipCount;
                 console.log(`Updated slip count to: ${slipCount}`);
-                  betInput.focus();
+                  
             }
             
             // Also update list count if element exists
