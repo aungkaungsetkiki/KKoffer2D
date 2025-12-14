@@ -284,10 +284,11 @@ function processAndAddBets() {
             bets.push(...processedBets);
             processedBets.forEach(bet => {
                 totalAmount += bet.amount;
+                betInput.focus();
             });
             
             updateDisplay();
-            betInput.focus();
+            
             
             // Update input field with remaining lines
             betInput.value = remainingLines.join('\n');
@@ -315,5 +316,5 @@ function processAndAddBets() {
  
     }
                 }
-betInput.focus();
+
 
