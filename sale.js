@@ -1,5 +1,4 @@
-  // Initialize Supabase client
-    let supabase;
+  
     let users = [];
     let currentKey = '';
     let slipCount = 0;
